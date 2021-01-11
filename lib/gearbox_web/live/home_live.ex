@@ -1,5 +1,7 @@
 defmodule GearboxWeb.HomeLive do
-  use GearboxWeb, :live_view
+  use Surface.LiveView
+
+  alias Gearbox.Page
 
   @impl true
   def mount(_params, _session, socket) do
