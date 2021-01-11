@@ -17,8 +17,12 @@ defmodule GearboxWeb.Router do
   scope "/", GearboxWeb do
     pipe_through :browser
 
+    live "/", HomeLive, :index
+
+    live "/page", PageLive
+    live "/layout", LayoutLive
+    live "/section", SectionLive
     live "/tree-select", TreeSelectLive
-    live "/", PageLive, :index
   end
 
   # Other scopes may use custom stacks.

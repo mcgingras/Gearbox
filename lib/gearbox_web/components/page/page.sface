@@ -5,9 +5,9 @@
 </div>
 <div class="grid grid-cols-6 gap-x-12 container mx-auto">
     <div class="col-span-1 border-r my-12 flex flex-col">
-        <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4">Page</a>
-        <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4">Layout</a>
-        <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4">Section</a>
+        <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.PageLive) }} class="mb-4">Page</a>
+        <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.LayoutLive) }} class="mb-4">Layout</a>
+        <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.SectionLive) }} class="mb-4">Section</a>
         <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4">Select</a>
         <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }}>TreeSelect</a>
     </div>

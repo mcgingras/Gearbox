@@ -1,4 +1,4 @@
-defmodule GearboxWeb.PageLive do
+defmodule GearboxWeb.HomeLive do
   use GearboxWeb, :live_view
 
   @impl true
