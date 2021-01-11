@@ -16,6 +16,7 @@ config :gearbox, GearboxWeb.Endpoint,
   secret_key_base: "3ElIrVpzIi6fxyww/zl0a0NYBFVIGvefYzk+zAbsWIp4YkzKsq8Av1Vq1MUcEV+f",
   render_errors: [view: GearboxWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Gearbox.PubSub,
+  force_ssl: [rewrite_on: [:x_forwarded_proto], host: nil],
   live_view: [signing_salt: "eaN1j25l"]
 
 # Configures Elixir's Logger
