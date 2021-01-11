@@ -10,8 +10,13 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :gearbox, GearboxWeb.Endpoint,
-  url: [host: "taut-regular-unau.gigalixirapp.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  url: [host: "gearbox-ui.com", port: 80],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  check_origin: [
+    "//gearbox-ui.com",
+    "//www.gearbox-ui.com",
+    "//taut-regular-unau.gigalixirapp.com/"
+  ]
 
 # Do not print debug messages in production
 config :logger, level: :info
