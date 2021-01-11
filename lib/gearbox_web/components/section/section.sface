@@ -1,0 +1,8 @@
+<div class=
+          {{ "self-start", "col-span-6", "mt-8",
+            "md:col-span-6": @type === "full",
+            "md:col-span-4": @type === "primary",
+            "md:col-span-2": @type === "secondary" }}
+>
+  <slot/>
+</div>

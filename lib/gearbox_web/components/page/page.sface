@@ -1,0 +1,19 @@
+<div class="w-100 p-4 shadow-md">
+    <div class="container mx-auto">
+        <span class="text-xl">Gearbox</span>
+    </div>
+</div>
+<div class="grid grid-cols-6 gap-x-12 container mx-auto">
+    <div class="col-span-1 border-r my-12 flex flex-col">
+        <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4">Page</a>
+        <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4">Layout</a>
+        <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4">Section</a>
+        <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4">Select</a>
+        <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }}>TreeSelect</a>
+    </div>
+    <div class="col-span-5 my-12">
+        <h1 class="text-4xl font-bold mb-4 tracking-normal">{{ @title }}</h1>
+        <h3 class="mb-4 text-base">{{ @subtitle }}</h3>
+        <slot/>
+    </div>
+</div>
