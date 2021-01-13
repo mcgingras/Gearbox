@@ -1,0 +1,19 @@
+<label for="email" class="block text-sm font-medium text-gray-700">{{ @name }}</label>
+<div x-data="{open: false}" x-cloak id={{ @id }} class="mt-1">
+  <div class="p-2 border text-gray-500 w-full rounded-sm form-select bg-white" @click="open = !open">
+    <span :if={{ MapSet.size(@selectedNodes) === 0 }} class="text-gray-500">{{ @placeholder }}</span>
+    <div :if={{ @multiple }}>
+      <ul class="flex">
+        <li :for={{ selectedNode <- @selectedNodes }} class="p-1 bg-gray-200 mr-2">{{ selectedNode["name"] }}</li>
+      </ul>
+    </div>
+    <div :if={{ !@multiple }}>
+      <span :for={{ selectedNode <- @selectedNodes }} class="p-1">{{ selectedNode["name"] }}</span>
+    </div>
+  </div>
+  <div class="shadow-lg p-2 bg-white" x-show="open" @click.away="open = false">
+    <TreeNode node={{@treeData}} parent_id={{@id}} />
+  </div>
+</div>
+
+<input :for={{ selectedNode <- @selectedNodes }} type="hidden" name="product[tags][]" value={{ selectedNode["value"] }} />
