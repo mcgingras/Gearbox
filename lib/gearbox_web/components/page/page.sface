@@ -1,6 +1,6 @@
 
 <div x-data="{ open: false }">
-    <div class="w-100 p-4 shadow-md">
+    <div class="w-100 p-4 shadow-md bg-gradient-to-r from-yellow-700 to-yellow-500 text-yellow-100">
         <div class="container mx-auto">
             <a href="/" class="text-xl">Gearbox</a>
         </div>
@@ -28,12 +28,12 @@
         </div>
     </div>
 
-    <div class="md:hidden fixed rounded-full h-12 w-12 bg-yellow-500 flex align-center justify-center" style="left: 1rem; bottom: 1rem;" @click="open = true">
+    <div class="md:hidden fixed rounded-full h-16 w-16 bg-yellow-500 flex align-center justify-center" style="right: 1rem; bottom: 1rem;" @click="open = true">
         <span class="self-center text-xl font-bold text-white">+</span>
     </div>
 
 
-    <div class="fixed inset-0 overflow-hidden" x-cloak>
+    <div class="fixed inset-0 overflow-hidden" x-show="open" x-cloak>
         <div class="absolute inset-0 overflow-hidden">
             <div
                 x-show="open"
@@ -74,9 +74,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-6 relative flex-1 px-4 sm:px-6">
+                    <div class="relative flex-1 px-4 sm:px-6">
                         <div class="absolute inset-0 px-4 sm:px-6">
-                            <div class="h-full border-2 border-dashed border-gray-200" aria-hidden="true"></div>
+                            <div class="h-full" aria-hidden="true">
+                                <div class="flex my-12 flex-col">
+                                    <span class="text-xs uppercase tracking-wider font-bold mb-4 text-gray-900">Base</span>
+                                    <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.PageLive) }} class="mb-4 text-gray-700">Page</a>
+                                    <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.LayoutLive) }} class="mb-4 text-gray-700">Layout</a>
+                                    <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.SectionLive) }} class="mb-4 text-gray-700">Section</a>
+                                    <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.SectionLive) }} class="mb-8 text-gray-700">Card</a>
+                                    <span class="text-xs uppercase tracking-wider font-bold mb-4 text-gray-900">Forms</span>
+                                    <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4 text-gray-700">Form</a>
+                                    <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4 text-gray-700">Field</a>
+                                    <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4 text-gray-700">TextInput</a>
+                                    <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4 text-gray-700">TextArea</a>
+                                    <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4 text-gray-700">Select</a>
+                                    <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="mb-4 text-gray-700">TreeSelect</a>
+                                    <a href={{ GearboxWeb.Router.Helpers.live_path(GearboxWeb.Endpoint, GearboxWeb.TreeSelectLive) }} class="text-gray-700">TreeNode</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
