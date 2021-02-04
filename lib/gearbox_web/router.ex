@@ -18,10 +18,15 @@ defmodule GearboxWeb.Router do
     pipe_through :browser
 
     live "/", HomeLive, :index
-
     live "/page", PageLive
+    live "/form", FormLive
+    live "/field", FieldLive
     live "/layout", LayoutLive
+    live "/select", SelectLive
     live "/section", SectionLive
+    live "/textarea", TextAreaLive
+    live "/tree-node", TreeNodeLive
+    live "/text-input", TextInputLive
     live "/tree-select", TreeSelectLive
   end
 

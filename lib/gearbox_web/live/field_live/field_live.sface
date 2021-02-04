@@ -1,0 +1,18 @@
+<Page title={{ "Field" }} subtitle={{ "Wrapper for form fields." }}>
+    <Layout>
+        <Section type={{ "full" }}>
+            <h2 class="text-2xl font-bold mb-4 tracking-normal text-gray-900">When to Use</h2>
+            <p class="tracking-normal text-base text-gray-700">Use <span class="bg-gray-100 text-gray-700 text-sm p-1 font-mono rounded-sm">Field</span> when you wrap a form input with it's field name. Field sets the field name in a context so child input components can retrieve it.</p>
+        </Section>
+
+        <Section type={{ "full" }}>
+            <h2 class="text-2xl font-bold mb-4 tracking-normal text-gray-900">Examples</h2>
+            No examples yet.
+        </Section>
+
+        <Section type={{ "full" }}>
+            <h2 class="text-2xl font-bold mb-4 tracking-normal text-gray-900">API</h2>
+            <Table columns={{ @columns }} dataSource={{ @dataSource }} />
+        </Section>
+    </Layout>
+</Page>
