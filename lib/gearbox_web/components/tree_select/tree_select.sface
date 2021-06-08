@@ -1,6 +1,6 @@
-<label for={{ @name }} class="block text-sm font-medium text-gray-700">{{ @name }}</label>
+<label :if={{ @name }} for={{ @name }} class="block text-sm font-medium text-gray-700">{{ @name }}</label>
 <div x-data="{open: false}" id={{ @id }} class="mt-1">
-  <div class="p-2 border text-gray-500 w-full rounded-sm form-select bg-white" @click="open = !open">
+  <div class="p-2 border text-gray-500 w-full rounded-sm form-select bg-white cursor-pointer" @click="open = !open">
     <span :if={{ MapSet.size(@selectedNodes) === 0 }} class="text-gray-500">{{ @placeholder }}</span>
     <div :if={{ @multiple }}>
       <ul class="flex">
@@ -12,8 +12,8 @@
     </div>
   </div>
   <div class="shadow-lg p-2 bg-white" x-show="open" x-cloak @click.away="open = false">
-    <TreeNode node={{@treeData}} parent_id={{@id}} />
+    <TreeNode node={{@treeData}} parent_id={{@id}} expandedMap={{@expandedMap}} />
   </div>
 </div>
 
-<input :for={{ selectedNode <- @selectedNodes }} type="hidden" name="product[tags][]" value={{ selectedNode["value"] }} />
+<input :for={{ selectedNode <- @selectedNodes }} type="hidden" name="name[]"  phx-hook="hiddenInput" value={{ selectedNode["value"] }} />

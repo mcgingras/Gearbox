@@ -1,0 +1,9 @@
+<Page title={{ "Scratch" }} subtitle={{ "Testing components" }}>
+    <Layout>
+        <Section type={{ "full" }}>
+          <form :on-change={{ "change", target: :live_view }} autocomplete="false" >
+            <TreeSelect treeData={{ @treeData }} id={{ "two" }} onSelect={{ :selectTree }} />
+          </form>
+        </Section>
+    </Layout>
+</Page>

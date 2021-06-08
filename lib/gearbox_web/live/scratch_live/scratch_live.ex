@@ -1,4 +1,4 @@
-defmodule GearboxWeb.TreeSelectLive do
+defmodule GearboxWeb.ScratchLive do
   use Surface.LiveView
 
   alias Gearbox.{Layout, Page, Section, Table, TreeSelect}
@@ -6,46 +6,24 @@ defmodule GearboxWeb.TreeSelectLive do
   @dataSource [
     %{
       key: "1",
-      property: "name",
-      description: "The label of the select field",
-      type: "string",
-      default: "-"
-    },
-    %{
-      key: "2",
       property: "placeholder",
       description: "the placeholder value.",
       type: "string",
       default: "select a value"
     },
     %{
-      key: "3",
+      key: "2",
       property: "treeData",
       description: "the actual data.",
       type: "map",
       default: "-"
     },
     %{
-      key: "4",
-      property: "multiple",
-      description: "If the select field supports multiple values at the same time.",
-      type: "boolean",
-      default: "false"
-    },
-    %{
-      key: "5",
-      property: "onSelect",
-      description: "The callback the calling Liveview receives onSelect action.",
-      type: "atom",
-      default: ":select"
-    },
-    %{
-      key: "6",
-      property: "selectedNodes",
-      description:
-        "The currently selected nodes (or node if multiple is false... still a list of size 1)",
-      type: "List (MapSet)",
-      default: "MapSet.new()"
+      key: "3",
+      property: "value",
+      description: "the active value of the tree select.",
+      type: "string",
+      default: "-"
     }
   ]
 
@@ -96,5 +74,11 @@ defmodule GearboxWeb.TreeSelectLive do
        columns: @columns,
        treeData: @treeData
      })}
+  end
+
+  def handle_event("change", params, socket) do
+    
+    IO.inspect(params)
+    {:noreply, socket}
   end
 end

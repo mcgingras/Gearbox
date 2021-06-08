@@ -24,19 +24,28 @@ defmodule Gearbox.TreeNode do
   prop node, :map, required: true
   prop parent_id, :any
 
+  @doc"""
+  A list of the childNodes that should be expanded (open).
+  """
+  prop expandedMap,:any, default: MapSet.new()
+
+
   def render(assigns) do
     ~H"""
-      {{ render_node(@node, @parent_id) }}
+      {{ render_node(@node, @parent_id, @expandedMap) }}
     """
   end
 
-  defp render_node(assigns, parent_id) do
+  defp render_node(assigns, parent_id, expandedMap) do
+    expanded = Enum.member?(expandedMap, assigns["name"])
     ~H"""
-      <div x-data="{open: true}" class="bg-white">
+      <div x-data="{ open: {{ expanded }} }" class="bg-white">
         <div class="flex relative items-center hover:bg-gray-100 px-2">
           <svg
             :if={{ length(assigns["children"]) > 0 }}
             @click="open = !open"
+            :on-click={{"mark-open", target: "##{parent_id}"}}
+            phx-value-select={{ assigns["name"] }}
             :class="{'-rotate-0': open, '-rotate-90': !open }"
             class="transform h-3 w-3 text-gray-300 cursor-pointer hover:text-gray-700"
             fill="currentColor"
@@ -54,7 +63,7 @@ defmodule Gearbox.TreeNode do
         </div>
 
         <div x-show="open" class="pl-4" :if={{ length(assigns["children"]) > 0 }} :for={{ childNode <- assigns["children"] }}>
-          {{ render_node(childNode, parent_id) }}
+          {{ render_node(childNode, parent_id, expandedMap) }}
         </div>
       </div>
     """
