@@ -13,4 +13,6 @@ defmodule Gearbox.Page do
 
   @doc "The subtitle"
   prop(subtitle, :string, required: false)
+
+  slot default
 end

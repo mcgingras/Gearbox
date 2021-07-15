@@ -1,4 +1,4 @@
-<Page title={{ "Gearbox Overview" }} subtitle={{ "Gearbox is a library of components built using the Surface Library.
-The Gearbox library is developed primary for use on the Gearflow.com platform, but the aim is to create components that are strictly presentational and isolated from any business logic used on Gearflow.com
-Thus, anyone should be able to use Gearbox components in their own projects." }}>
+<Page title={ "Gearbox Overview" } subtitle={ "Gearbox is a library of components built using the Surface Library.
+The Gearbox library is developed primarily for use on the Gearflow.com platform, but the aim is to create components that are strictly presentational and isolated from any business logic used on Gearflow.com
+Thus, anyone should be able to use Gearbox components in their own projects." }>
 </Page>

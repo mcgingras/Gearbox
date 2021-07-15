@@ -1,18 +1,18 @@
-<Page title={{ "TreeSelect" }} subtitle={{ "Select form element for tree like data." }}>
+<Page title={ "TreeSelect" } subtitle={ "Select form element for tree like data." }>
     <Layout>
-        <Section type={{ "full" }}>
+        <Section type={ "full" }>
             <h2 class="text-2xl font-bold mb-4 tracking-normal text-gray-900">When to Use</h2>
             <p class="tracking-normal text-base text-gray-700">Use <span class="bg-gray-100 text-gray-700 text-sm p-1 font-mono rounded-sm">TreeSelect</span> when you need a select field, but the values are provided in a tree like structure. Within Gearflow, <span class="bg-gray-100 text-gray-700 text-sm p-1 font-mono rounded-sm">TreeSelect</span> is used to allow for the selection of Tags, which are hierarchical and thus displayed in a tree like manner.</p>
         </Section>
 
-        <Section type={{ "full" }}>
+        <Section type={ "full" }>
             <h2 class="text-2xl font-bold mb-4 tracking-normal text-gray-900">Examples</h2>
-            <TreeSelect treeData={{ @treeData }} id={{ "two" }} onSelect={{ :selectTree }} multiple={{ true }} />
+            <TreeSelect treeData={ @treeData } id={ "two" } onSelect={ :selectTree } multiple={ true } />
         </Section>
 
-        <Section type={{ "full" }}>
+        <Section type={ "full" }>
             <h2 class="text-2xl font-bold mb-4 tracking-normal text-gray-900">API</h2>
-            <Table columns={{ @columns }} dataSource={{ @dataSource }} />
+            <Table columns={ @columns } dataSource={ @dataSource } />
         </Section>
     </Layout>
 </Page>

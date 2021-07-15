@@ -1,17 +1,17 @@
-<Page title={{ "Layout" }} subtitle={{ "Select form element for tree like data." }}>
+<Page title={ "Layout" } subtitle={ "Select form element for tree like data." }>
     <Layout>
-        <Section type={{ "full" }}>
+        <Section type={ "full" }>
             <h2 class="text-2xl font-bold mb-4 tracking-normal">When to Use</h2>
             <p class="tracking-normal text-base">Use sections in the following</p>
         </Section>
 
-        <Section type={{ "full" }}>
+        <Section type={ "full" }>
             <h2 class="text-2xl font-bold mb-4 tracking-normal">Examples</h2>
         </Section>
 
-        <Section type={{ "full" }}>
+        <Section type={ "full" }>
             <h2 class="text-2xl font-bold mb-4 tracking-normal">API</h2>
-            <Table columns={{ @columns }} dataSource={{ @dataSource }} />
+            <Table columns={ @columns } dataSource={ @dataSource } />
         </Section>
     </Layout>
 </Page>

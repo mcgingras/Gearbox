@@ -5,4 +5,5 @@ defmodule Gearbox.Layout do
   use Surface.LiveComponent
 
   data(gapSize, :string, default: "gap-4")
+  slot default
 end

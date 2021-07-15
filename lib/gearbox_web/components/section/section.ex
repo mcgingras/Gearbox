@@ -9,4 +9,5 @@ defmodule Gearbox.Section do
   use Surface.Component
 
   prop(type, :string, required: true, default: "full", values: ["full", "primary", "secondary"])
+  slot default
 end
